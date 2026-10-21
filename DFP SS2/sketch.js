@@ -55,4 +55,7 @@ function draw()
   stroke (4);
   fill (255,0,0);
   rect (675, 545, 50, 50);
+
+// large cloud
+  ellipse (600, 175, 350, 45)
 }

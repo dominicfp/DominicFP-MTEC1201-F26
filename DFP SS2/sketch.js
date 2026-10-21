@@ -57,5 +57,11 @@ function draw()
   rect (675, 545, 50, 50);
 
 // large cloud
+  fill (255,255,255);
   ellipse (600, 175, 350, 45)
+
+// small cloud
+  fill (255,255,255);
+  ellipse (400, 125, 150, 30)
+
 }

@@ -5,17 +5,21 @@
 // the ship of the fictional Straw Hat Pirates from the internationally acclaimed  //
 // manga and anime series, One Piece by Eiichiro Oda. //
 
+
+let cloudX = 800
+
 function setup()
 {
 // canvas size
   createCanvas(800, 800);
 
 // canvas color
-  background (116, 227, 253);
+  
 }
 
 function draw()
 {
+  background (116, 227, 253);
 // ocean + horizon
   stroke (0,0,0);
   fill (0, 60, 255);
@@ -58,14 +62,18 @@ function draw()
 
 // top cloud
   fill (255,255,255);
-  ellipse (-frameCount * 1.55, 90, 185, 20);
+  ellipse (cloudX, 90, 185, 20);
 
 // middle cloud
   fill (255,255,255);
-  ellipse (-frameCount * 1.45, 180, 238, 25);
+  ellipse (cloudX,  180, 238, 25);
 
 // bottom cloud
   fill (255,255,255);
-  ellipse (-frameCount * 1.35, 270, 300, 30);
+  ellipse (cloudX, 270, 300, 30);
 
+}
+
+function mousePressed(){
+  cloudX-=0.5
 }

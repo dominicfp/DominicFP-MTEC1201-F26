@@ -56,12 +56,16 @@ function draw()
   fill (255,0,0);
   rect (675, 545, 50, 50);
 
-// large cloud
+// top cloud
   fill (255,255,255);
-  ellipse (600, 175, 350, 45)
+  ellipse (-frameCount * 1.55, 90, 185, 20);
 
-// small cloud
+// middle cloud
   fill (255,255,255);
-  ellipse (400, 125, 150, 30)
+  ellipse (-frameCount * 1.45, 180, 238, 25);
+
+// bottom cloud
+  fill (255,255,255);
+  ellipse (-frameCount * 1.35, 270, 300, 30);
 
 }

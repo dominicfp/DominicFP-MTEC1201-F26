@@ -75,8 +75,8 @@ function draw()
 // crude seagull shape cursor follow
   push();
   strokeWeight(3)
-  line(mouseX - 45, mouseY - 45,  mouseX, mouseY);
-  line(mouseX + 45, mouseY - 45,  mouseX, mouseY);
+  line(mouseX - 25, mouseY - 25,  mouseX, mouseY);
+  line(mouseX + 25, mouseY - 25,  mouseX, mouseY);
   pop();
 
 }

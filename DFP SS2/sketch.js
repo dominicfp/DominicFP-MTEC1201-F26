@@ -1,25 +1,25 @@
 //        D. F. P.        //
 // 'Along the Grand Line' //
-// For this semester, I am interested in exploring the theme of Piracy in Fiction. //
-// This sketch ties into the theme I have chosen in that it is intended to portray //
-// the ship of the fictional Straw Hat Pirates from the internationally acclaimed  //
+// For this semester, I intend to explore the theme of Piracy in Fiction. //
+// This sketch ties into the chosen theme in that it is intended to portray //
+// the ship of the fictional Straw Hat Pirates from the internationally acclaimed //
 // manga and anime series, One Piece by Eiichiro Oda. //
 
 
 let cloudX = 800
+let circleX = 100
 
 function setup()
 {
 // canvas size
   createCanvas(800, 800);
-
-// canvas color
-  
 }
 
 function draw()
 {
+// sky
   background (116, 227, 253);
+
 // ocean + horizon
   stroke (0,0,0);
   fill (0, 60, 255);
@@ -28,7 +28,7 @@ function draw()
 // sun
   stroke (255, 244,0);
   fill (255, 244, 0);
-  circle (100, 100, 120);
+  circle (circleX, 100, 120);
  
 // hull
   stroke (4);
@@ -62,18 +62,25 @@ function draw()
 
 // top cloud
   fill (255,255,255);
-  ellipse (cloudX, 90, 185, 20);
+  ellipse (cloudX - 175, 90, 185, 20);
 
 // middle cloud
   fill (255,255,255);
-  ellipse (cloudX,  180, 238, 25);
+  ellipse (cloudX - 110,  180, 238, 25);
 
 // bottom cloud
   fill (255,255,255);
-  ellipse (cloudX, 270, 300, 30);
+  ellipse (cloudX - 25, 270, 300, 30);
+
+// crude seagull shape cursor follow
+  push();
+  strokeWeight(3)
+  line(mouseX - 45, mouseY - 45,  mouseX, mouseY);
+  line(mouseX + 45, mouseY - 45,  mouseX, mouseY);
+  pop();
 
 }
 
 function mousePressed(){
-  cloudX-=0.5
+  cloudX= cloudX-35
 }

@@ -6,7 +6,7 @@
 // manga and anime series, One Piece by Eiichiro Oda. //
 
 // Press the Mouse 1 button to speed up the cloud movements. //
-// Once clouds are entirely out of frame, press Mouse 1 
+// Once clouds are entirely out of frame, press Mouse 1 to reset their position. //
 
 
 let cloudX = 800

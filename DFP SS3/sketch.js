@@ -162,7 +162,8 @@ function draw()
   vertex(295 + x, 115 + y);
   endShape(CLOSE);
   pop ();
-  
+
+// cloud movement speed variable + playing with booleans
   if (mouseIsPressed === true) {
     cloudX  = cloudX - 195;
 } else if (mouseIsPressed === false) {

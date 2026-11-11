@@ -84,7 +84,6 @@ function draw()
   ellipse (cloudX - 25, 270, 300, 30);
 
 // crude seagull shape cursor follow
-// push pop codes i learned from my friend who was helping me through the code
   imageMode(CENTER);
   image(img2, mouseX, mouseY);
 

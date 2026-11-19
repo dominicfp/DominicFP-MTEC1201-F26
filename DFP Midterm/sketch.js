@@ -65,7 +65,6 @@ function pregameScreen()
   image (img4, 18, 600); // left fish
   image (img4, 310, 600); // center fish
   image (img4, 590, 600); // right fish
-
 }
 
 function gameScreenBackground()
@@ -281,5 +280,4 @@ function cloudSpeedVariable()
   {
     cloudX = 800;
   }
-
 }

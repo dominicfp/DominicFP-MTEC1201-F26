@@ -41,7 +41,7 @@ async function setup()
 
 function draw()
 {
-  pregameScreen();
+  lostGameScreen();
 }
 
 function keyPressed()
@@ -234,6 +234,42 @@ function gameScreenBackground()
 
 // sketch runtime text display
   text(`Running Time: ${nf(s, 1, 1)} S`, 200, 750, 810);
+}
+
+function lostGameScreen()
+{
+  background (255, 0, 0);
+  textSize(50);
+  textFont('Comic Sans MS');
+  fill(0, 0, 0);
+  textAlign(CENTER, CENTER);
+  text('Game Over! You Lost!', 400, 380);
+  textSize(40);
+  text('You didn\'t catch enough fish!', 400, 450);
+  textSize(30);
+  text('Press SPACEBAR to Restart', 400, 550);
+  image (img3, 80, 100);
+  image (img4, 18, 600); // left fish
+  image (img4, 310, 600); // center fish
+  image (img4, 590, 600); // right fish
+}
+
+function wonGameScreen()
+{
+  background (5, 163, 0);
+  textSize(50);
+  textFont('Comic Sans MS');
+  fill(0, 0, 0);
+  textAlign(CENTER, CENTER);
+  text('Game Over! You Won!', 400, 380);
+  textSize(40);
+  text('You caught enough fish!', 400, 450);
+  textSize(30);
+  text('Press SPACEBAR to Restart', 400, 550);
+  image (img3, 80, 100);
+  image (img4, 18, 600); // left fish
+  image (img4, 310, 600); // center fish
+  image (img4, 590, 600); // right fish
 }
 
 function cloudSpeedVariable()

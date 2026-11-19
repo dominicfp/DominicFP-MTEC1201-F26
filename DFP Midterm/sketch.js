@@ -39,17 +39,20 @@ async function setup()
   img4 = await loadImage ('png-assets/fish_pgs_rs.png');
 }
 
-function draw() {
-  gameScreenBackground();
-  seagullCursor();
-  cloudMovement();
-  skyfishImage();
-  sketchRuntime();
-  cloudSpeedVariable();
+function draw()
+{
+  pregameScreen();
 }
 
-// function for the intro/menu screen
-function pregameScreen(){
+function keyPressed()
+{
+  if (key === ' ') {
+    gameScreenBackground();
+  }
+}
+
+function pregameScreen()
+{
   background (0, 157, 255);
   textSize(50);
   textFont('Comic Sans MS');
@@ -65,10 +68,10 @@ function pregameScreen(){
 
 }
 
-function gameScreenBackground(){
+function gameScreenBackground()
+{
 // sky
   background (116, 227, 253);
-
 // ocean + horizon
   stroke (0,0,0);
   fill (0, 60, 255);
@@ -202,16 +205,12 @@ function gameScreenBackground(){
   vertex(295 + x, 115 + y);
   endShape(CLOSE);
   pop ();
-}
 
-function seagullCursor(){
 // crude seagull shape cursor follow
   imageMode(CENTER);
   image(img2, mouseX, mouseY);
 
-}
 
-function cloudMovement(){
 // cloud movement speed variable + playing with booleans
   if (mouseIsPressed === true) {
     cloudX  = cloudX - 195;
@@ -219,17 +218,12 @@ function cloudMovement(){
     cloudX = cloudX - 25;
 } else {
     cloudX = 800;
-}   
 }
 
-function skyfishImage(){   
 // skyfish image
   imageMode(CENTER);
   image(img, 400 - x * 2, 765 - y *.5, 90, 90);
 
-}
-
-function sketchRuntime(){
 // sketch running time variable
   let s = millis() / 1000;
 
@@ -240,7 +234,6 @@ function sketchRuntime(){
 
 // sketch runtime text display
   text(`Running Time: ${nf(s, 1, 1)} S`, 200, 750, 810);
-
 }
 
 function cloudSpeedVariable()
